@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Nested Scrollable</title>
+    <style>
+      body {
+        margin: 0;
+      } /* Remove default body margin */
+      #scroll2 {
+        margin-top: 100px;
+        height: 500px;
+        width: 600px;
+        overflow-y: auto;
+        background: lightblue;
+      }
+      #scroll1 {
+        margin-top: 100px;
+        height: 800px;
+        width: 500px;
+        overflow-y: auto;
+        background: lightcoral;
+        position: relative;
+        left: 100px;
+      }
+      .content {
+        height: 1400px;
+      } /* Content taller than both containers */
+      .bar {
+        height: 1000px;
+      }
+      #target {
+        position: relative;
+        top: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="scroll2">
+      <div id="scroll1">
+        <div class="bar"></div>
+        <div id="target">
+          Content that scrolls vertically within the inner div, which itself
+          scrolls vertically within the outer div.
+        </div>
+        <div class="bar"></div>
+      </div>
+    </div>
+  </body>
+</html>
